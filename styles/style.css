@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Lobster&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&family=Pacifico&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff4757;
+    --secondary: #0e2334;
+    --white: #fff;
+    --black: #000;
+    --whitesmoke: rgba(255, 255, 255, 0.8);
+    --majenta: #ee36c6;
+    --blakish1: #374151;
+    --blakish2: rgb(12, 10, 10);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    color: var(--whitesmoke);
+    font-family: "Gordita", sans-serif;
+}
+
+/* ========== ========== loader start  ========== ========== */
+
+#loader {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(18, 16, 16), rgb(34, 39, 82));
+    /* background-color: indigo; */
+    color: var(--white)
+}
+
+#loader h1 {
+    font-size: 7vw;
+}
+
+/* ========== ========== loader end  ========== ========== */
+
+#main {
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--black);
+
+}
+
+#page1,
+#page2,
+#page3,
+#page4 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ========== ========== navbar start =========== ========== */
+
+ul {
+    list-style: none;
+}
+
+.bars {
+
+    position: fixed;
+    min-width: 18px;
+    width: 3vw;
+    height: 3vw;
+    min-height: 18px;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+    z-index: 222;
+    padding-top: 9px;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--white);
+    position: absolute;
+}
+
+.bars span::before,
+.bars span::after {
+    content: "";
+    display: block;
+    background-color: var(--white);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+}
+
+.bar::before {
+    transform: translateY(-9px);
+}
+
+.bar::after {
+    transform: translateY(9px);
+}
+
+.bars.active .bar {
+    background-color: transparent;
+}
+
+.bars.active span::before {
+    animation: top-bar 1s;
+    animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+    animation: bottom-bar 1s;
+    animation-fill-mode: forwards;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 1s;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#nav a {
+    color: var(--white);
+    text-decoration: none;
+    line-height: 70vw;
+    font-size: 2vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-indent: 50vw;
+    border-radius: 50%;
+    transition: all 0.5s;
+    transform: translate(-30px, 10px);
+}
+
+.visible {
+    z-index: 221 !important;
+    opacity: 1 !important;
+}
+
+.shape-circle {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    top: -10vw;
+    right: -10vw;
+    /* position: absolute; */
+    position: fixed;
+    transition: all 1s ease-in-out;
+    background-image: linear-gradient(to right, rgb(18, 16, 16), rgb(34, 39, 82));
+    box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:first-child {
+    width: 200vw;
+    height: 200vw;
+    top: -100vw;
+    right: -100vw;
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:nth-child(2) {
+    width: 150vw;
+    height: 150vw;
+    top: -75vw;
+    right: -75vw;
+    z-index: 6;
+    transition: all 0.6s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:nth-child(3) {
+    width: 100vw;
+    height: 100vw;
+    top: -50vw;
+    right: -50vw;
+    z-index: 7;
+    transition: all 0.7s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:last-child {
+    width: 50vw;
+    height: 50vw;
+    top: -25vw;
+    right: -25vw;
+    z-index: 8;
+    transition: all 0.8s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:first-child a {
+    line-height: 265vw !important;
+    text-indent: 15vw !important;
+}
+
+nav.visible li:nth-child(2) a {
+    line-height: 200vw !important;
+    text-indent: 17vw !important;
+}
+
+nav.visible li:nth-child(3) a {
+    line-height: 137vw !important;
+    text-indent: 17vw !important;
+}
+
+nav.visible li:last-child a {
+    line-height: 70vw !important;
+    text-indent: 12vw !important;
+}
+
+@keyframes top-bar {
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+}
+
+@keyframes bottom-bar {
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: rotate(-45deg) translateY(0);
+    }
+}
+
+/* ========== ========== navbar end ========== ========== */
+
+/* page1 my pic */
+#mypic {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    opacity: 0.4;
+}
+
+/* ========== ========== skill start ========== ========== */
+.skill-box {
+    max-width: 380px;
+    height: 480px;
+    width: 100%;
+    padding: 1em;
+    position: fixed;
+    z-index: 102;
+    top: 10%;
+}
+
+.skill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    width: 100%;
+    height: 100%;
+}
+
+.skill .link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.skill .link::before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-image: linear-gradient(to right, transparent 25%, var(--primary));
+    border-radius: 0 50% 50% 0;
+    transform: scale(2);
+    z-index: -2;
+}
+
+.skill .link::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: var(--primary);
+    border-radius: 0 50% 50% 0;
+    transform: scale(2);
+    z-index: -1;
+    opacity: 0.5;
+    transition: opacity .3s;
+}
+
+.skill .link:hover::after {
+    opacity: .9;
+}
+
+
+.skill .link .close,
+.skill input:checked~div .menu {
+    display: none;
+}
+
+.skill input:checked~div .close {
+    display: block;
+}
+
+.link span {
+    font-variant: small-caps;
+}
+
+.skill ul.submenu {
+    position: absolute;
+    top: 0;
+    left: 4em;
+    width: 350px;
+    height: 100%;
+    transform: rotate(-90deg);
+    visibility: hidden;
+    transition: visibility .1s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.skill>input:checked~ul {
+    visibility: inherit;
+}
+
+.skill>input:checked~ul li {
+    transform: rotate(calc((180deg/9) * var(--item))) translateX(0);
+    opacity: 1;
+}
+
+.skill ul.submenu li {
+    --item: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    width: 175px;
+    height: 60px;
+    transform: rotate(calc((180deg/9) * var(--item))) translateX(-157px);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform .7s, opacity .2s;
+}
+
+.skill ul.submenu li:nth-child(2) {
+    --item: 2;
+}
+
+.skill ul.submenu li:nth-child(3) {
+    --item: 3;
+}
+
+.skill ul.submenu li:nth-child(4) {
+    --item: 4;
+}
+
+.skill ul.submenu li:nth-child(5) {
+    --item: 5;
+}
+
+.skill ul.submenu li:nth-child(6) {
+    --item: 6;
+}
+
+.skill ul.submenu li:nth-child(7) {
+    --item: 7;
+}
+
+.skill ul.submenu li:nth-child(8) {
+    --item: 8;
+}
+
+.skill ul.submenu li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    vertical-align: middle;
+    color: inherit;
+}
+
+.skill ul.submenu li a img {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border .3s, background-color .3s;
+}
+
+.skill ul.submenu li a span {
+    position: absolute;
+    left: calc(100% - 1em);
+    text-align: right;
+    font-size: 13px;
+    padding: 0 10px;
+    border-radius: 25px;
+    background-image: linear-gradient(to left, transparent 25%, var(--primary));
+    opacity: 0;
+    z-index: -1;
+    transition: color .3s, transform .2s .4s, opacity .2s .4s;
+}
+
+.skill>input:checked~ul li a span {
+    transform: translate(40px);
+    opacity: 1;
+}
+
+.skill ul.submenu li a span::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 25px;
+    border-color: var(--secondary-color);
+    z-index: -1;
+    transition: background-color .3s;
+}
+
+.skill ul.submenu li a:hover span::before {
+    background-color: transparent;
+}
+
+.skill ul.submenu li a:hover span {
+    color: var(--white-color);
+}
+
+/* ========== ========== skill end ========== ========== */
+
+
+#canvas2 {
+    background-color: var(--black);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* ########## ########## ########## #page2 start  ########## ########## ########## */
+.left-text {
+    position: absolute;
+    left: 2%;
+    /* top: 20%; */
+    top: 50%;
+    text-align: center;
+}
+
+.right-text {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    text-align: center;
+}
+
+.right-text h4,
+.left-text h4 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.right-text .row,
+.left-text .row {
+    margin-bottom: 2rem;
+}
+
+.right-text button,
+.left-text button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: var(--white);
+    box-shadow: 1px 1px 3px #474343, -2px -2px 5px var(--white);
+    margin-left: 5px;
+    font-weight: 900;
+    font-size: 1.6rem;
+    border-radius: 10%;
+}
+
+/* ########## ########## ########## #page2 end  ########## ########## ########## */
+
+/* ########## ########## ########## #page3 start  ########## ########## ########## */
+
+
+#page3 .about-me {
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    max-width: 320px;
+}
+
+#page3 h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+#page3 p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* ========== ========== edupath start ========== ========== */
+#edupath {
+    width: 35vw;
+    height: 90vh;
+}
+
+#edupath .edu-title {
+    display: flex;
+    justify-content: center;
+}
+
+#edupath h1 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+svg {
+    overflow: visible;
+}
+
+.ball {
+    fill: var(--white);
+    /* visibility: hidden; */
+    visibility: visible;
+}
+
+.line {
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 1px;
+}
+
+text {
+    fill: var(--white);
+    font-size: 4px;
+    /* visibility: hidden; */
+    visibility: visible;
+}
+
+/* ========== ========== edupath end ========== ========== */
+
+/* ########## ########## ########## #page3 end  ########## ########## ########## */
+
+
+/* ########## ########## ########## #page4 start  ########## ########## ########## */
+
+
+
+/* ========== ========== end-text start  ========== ========== */
+.end-text {
+    color: var(--white);
+    position: absolute;
+    bottom: 20%;
+    right: 2.5%;
+    text-align: right;
+}
+
+.end-text h2 {
+    opacity: 0.6;
+    font-size: 1.8rem;
+    margin-right: 1vw;
+}
+
+.end-text h1 {
+    opacity: 0.9;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* ========== ========== end-text end ========== ========== */
+
+
+/* ########## ########## ########## #page4 end  ########## ########## ########## */

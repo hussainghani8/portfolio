@@ -1,0 +1,309 @@
+@media screen and (max-width: 575px) {
+    #mypic {
+        opacity: 0.4;
+    }
+
+    /* ------------------------------ navbar start ------------------------------- */
+    #nav a {
+        font-size: 3.5vw;
+        transform: translate(-24px, 20px);
+    }
+
+    /* ------------------------------ navbar end --------------------------------- */
+
+    /* ------------------------------ canvas 1 start --------------------------------- */
+    #main #canvas1 {
+        opacity: 0.1;
+    }
+
+    /* ------------------------------ canvas 1 end --------------------------------- */
+
+
+    /* ############################## #page2 start ################################## */
+    .left-text {
+        top: 20%;
+        left: 15%;
+
+    }
+
+    .right-text {
+        top: 50%;
+        right: 14%;
+    }
+
+    /* .right-text button,
+    .left-text button {
+        height: 28px;
+        width: 28px;
+        margin-left: 4px;
+        font-size: 1.5rem;
+    } */
+    .right-text button,
+    .left-text button {
+        height: 20px;
+        width: 20px;
+        /* margin-left: 4px; */
+        font-size: 1.2rem;
+    }
+
+    /* ############################## #page2 end ################################## */
+
+    /* ############################## #page3 start ################################## */
+    /* ------------------------------ edupath  start ------------------------------ */
+    #edupath {
+        width: 100vw;
+    }
+
+    #edupath h1 {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    svg {
+        margin: 0;
+    }
+
+    /* ------------------------------ edupath  end -------------------------------- */
+    /* ------------------------------ about me  start -------------------------------- */
+    #page3 .about-me {
+        top: 85%;
+        right: 5%
+    }
+
+    /* ------------------------------ about me  end -------------------------------- */
+    /* ############################## #page3 end ################################## */
+    /* ############################## #page4 start ################################## */
+
+    /* .end-text {
+        top: 78%;
+        left: -13px;
+        text-align: center;
+    } */
+    #page4 {
+        height: 200vh;
+    }
+
+    .end-text {
+        color: var(--white);
+        position: absolute;
+        /* top: 40%; */
+        /* top: 240%; */
+        bottom: 2%;
+        right: 2.5%;
+        text-align: right;
+    }
+
+    .end-text h1 {
+        /* font-size: 3.1rem; */
+        font-size: 2.6rem;
+    }
+
+    .end-text h2 {
+        font-size: 1.8rem;
+    }
+
+
+
+    /* ############################## #page4 end ################################## */
+}
+
+@media(min-width: 576px) and (max-width:767px) {
+
+    #page2 .left-text {
+        top: 40%;
+        left: 10%;
+    }
+
+    #page2 .right-text {
+        top: 65%;
+        right: 4%;
+    }
+
+
+    /* ############################## #page3 start ################################## */
+    #page3 {
+        padding-top: 100px;
+    }
+
+    #page3 .about-me {
+        right: 0;
+        max-width: 170px;
+    }
+
+    #page3 h1 {
+        /* font-size: 2.5rem; */
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    #page3 p {
+        font-size: 1.22rem;
+    }
+
+    /* ------------------------------ skillbox start-------------------------------- */
+    .skill .link::before,
+    .skill .link::after {
+        transform: scale(1.5);
+
+    }
+
+    .skill .link {
+        font-size: 1.6rem;
+        justify-content: flex-end;
+    }
+
+    .skill ul.submenu {
+        top: -20px;
+        left: 4em;
+        width: 270px;
+    }
+
+    .skill ul.submenu li {
+        width: 150px;
+    }
+
+    .skill>input:checked~ul li a span {
+        transform: translate(20px);
+    }
+
+    .skill ul.submenu li a img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* ------------------------------ skillbox end-------------------------------- */
+
+    /* ------------------------------ edupath  start ------------------------------ */
+    #edupath {
+        height: 60vh;
+    }
+
+    #edupath h1 {
+        text-align: center;
+        font-size: 2rem;
+        top: 50px;
+    }
+
+    svg {
+        margin: 0;
+    }
+
+    text {
+        font-size: 1.9px;
+    }
+
+    /* ------------------------------ edupath  end -------------------------------- */
+    /* ------------------------------ about-me  end -------------------------------- */
+
+    .about-me {
+        width: 250px;
+    }
+
+    /* ------------------------------ about-me  end -------------------------------- */
+    /* ############################## #page3 end ################################## */
+
+    /* ############################## #page4 start ################################## */
+
+    .end-text {
+        top: 45%;
+        /* width: 260px; */
+        /* background-color: #f3e3e3; */
+    }
+
+    .end-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .end-text h2 {
+        font-size: 1.2rem;
+    }
+
+    /* ############################## #page4 end ################################## */
+}
+
+@media all and (min-width: 768px) and (max-width:992px) {
+
+    #page2 .left-text {
+        top: 40%;
+        left: 10%;
+    }
+
+    #page2 .right-text {
+        top: 65%;
+        right: 4%;
+    }
+
+
+    /* ############################## #page3 start ################################## */
+    #page3 {
+        padding-top: 100px;
+    }
+
+    #page3 .about-me {
+        right: 4%;
+        max-width: 218px;
+    }
+
+    #page3 h1 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+
+    #page3 p {
+        font-size: 1.5rem;
+    }
+
+    /* ------------------------------ edupath  start ------------------------------ */
+
+    #edupath h1 {
+        position: absolute;
+        text-align: center;
+        font-size: 2.5rem;
+        /* top: 100px; */
+        top: 25%;
+    }
+
+    svg {
+        margin: 0;
+    }
+
+    text {
+        font-size: 4.3px;
+    }
+
+    /* ------------------------------ edupath  end -------------------------------- */
+    /* ------------------------------ about-me  end -------------------------------- */
+
+    .about-me {
+        width: 250px;
+    }
+
+    /* ------------------------------ about-me  end -------------------------------- */
+    /* ############################## #page3 end ################################## */
+
+    /* ############################## #page4 start ################################## */
+
+    .end-text {
+        top: 45%;
+        /* width: 260px; */
+        /* background-color: #f3e3e3; */
+    }
+
+    .end-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .end-text h2 {
+        font-size: 1.5rem;
+    }
+
+    /* ############################## #page4 end ################################## */
+}
+
+@media all and (min-width: 993px) and (max-width:1200px) {}
+
+@media all and (min-width: 1201px) {}

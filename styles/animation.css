@@ -1,0 +1,33 @@
+#page2 .anitag:first-child {
+    transform: translate(-30%, 30%);
+    opacity: 0;
+    transition: .8s;
+}
+
+#page2.show-animate .anitag:first-child {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#page2 .anitag:last-child {
+    /* transform: translateX(100%); */
+    transform: translate(30%, -30%);
+    opacity: 0;
+    transition: .8s;
+}
+
+#page2.show-animate .anitag:last-child {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#page3 .anitag {
+    transform: translate(30%, -30%);
+    opacity: 0;
+    transition: .8s;
+}
+
+#page3.show-animate .anitag {
+    transform: translate(0);
+    opacity: 1;
+}

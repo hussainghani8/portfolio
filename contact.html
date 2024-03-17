@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- *******  Link To CSS Style Sheet  ******* -->
+    <link rel="stylesheet" type="text/css" href="./styles/contact.css">
+
+    <!-- *******  Font Awesome Icons Link  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- *******  Link To Goggle Fonts  *******  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- 
+    - custom font link
+  -->
+    <link rel="stylesheet" href="./font/font.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Contact Section</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <!-- navbar start -->
+        <div class="bars" id="nav-action">
+            <span class="bar">
+
+            </span>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li class="shape-circle circle-one"><a href="./contact.html">CONTACT</a></li>
+                <li class="shape-circle circle-two"><a href="./myworks.html">MY WORKS</a></li>
+                <li class="shape-circle circle-three"><a href="./resume.html">RESUME</a></li>
+                <li class="shape-circle circle-four"><a href="./index.html">HOME</a></li>
+            </ul>
+        </nav>
+        <!-- navbar end -->
+
+        <main class="row">
+
+            <!--  *******   Left Section (Column) Starts   *******  -->
+
+            <section class="col left">
+
+                <!--  *******   Title Starts   *******  -->
+
+                <div class="contactTitle">
+                    <h2>Get In Touch</h2>
+                    <p>If you want to reach me out for new <br>
+                        projects or just for consulting:</p>
+                </div>
+
+                <!--  *******   Title Ends   *******  -->
+
+                <!--  *******   Contact Info Starts   *******  -->
+
+                <div class="contactInfo">
+
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Phone</span>
+                            <span>+88 01933363499</span>
+                        </div>
+                    </div>
+
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <span>Email</span>
+                            <span>hussainghani8@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="details">
+                            <span>Location</span>
+                            <span>Mirpur-11/B, Dhaka-1216</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--  *******   Contact Info Ends   *******  -->
+
+                <!--  *******   Social Media Starts   *******  -->
+
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com/hussainghani8"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hussainghani8/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <!--  *******   Social Media Ends   *******  -->
+
+            </section>
+
+            <!--  *******   Left Section (Column) Ends   *******  -->
+
+            <!--  *******   Right Section (Column) Starts   *******  -->
+
+            <section class="col right">
+
+                <!--  *******   Form Starts   *******  -->
+
+                <form class="messageForm">
+
+                    <div class="inputGroup halfWidth">
+                        <input type="text" id="name" required="required">
+                        <label>Your Name</label>
+                    </div>
+
+                    <div class="inputGroup halfWidth">
+                        <input type="email" name="" id="email" required="required">
+                        <label>Email</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <input type="text" name="" id="subject" required="required">
+                        <label>Subject</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <textarea required="required" id="message"></textarea>
+                        <label>Say Something</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <button id="submitbtn">Send Message</button>
+                    </div>
+
+                </form>
+
+                <!--  *******   Form Ends   *******  -->
+            </section>
+
+            <!--  *******   Right Section (Column) Ends   *******  -->
+
+        </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("bGAT61Gu2o5afwKx_");
+    </script>
+
+    <script src="./scripts/contact.js" defer></script>
+</body>
+
+</html>
